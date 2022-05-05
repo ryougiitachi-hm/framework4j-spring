@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: spring-cloud-nacos
+  cloud:
+    nacos:
+      # service discovery
+      discovery:
+        server-addr: 127.0.0.1:8848
+      # configuration centre
+      config:
+        server-addr: 127.0.0.1:8848
+        # By default, this value = spring.application.name
+        # dataId=${prefix}-${spring.profiles.active}.${file-extension}
+        #prefix:
+
+server:
+  port: 8080
