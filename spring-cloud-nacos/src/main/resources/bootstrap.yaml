@@ -10,7 +10,10 @@ spring:
         server-addr: 127.0.0.1:8848
 #        username: nacos
 #        password: nacos
-        auto-register: true
+        # not necessary
+#        auto-register: true
+        namespace: public
+        group: PUBLIC_GRP
       # configuration centre
       config:
         server-addr: 127.0.0.1:8848
