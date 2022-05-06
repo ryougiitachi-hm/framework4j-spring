@@ -1,11 +1,12 @@
 package per.itachi.framework4j.spring.cloud.nacos;
 
+import com.alibaba.nacos.spring.context.annotation.discovery.EnableNacosDiscovery;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-@EnableDiscoveryClient
+//@EnableDiscoveryClient // optional
+@EnableNacosDiscovery // required
 public class NacosClientApplication {
 
     public static void main(String[] args) {
