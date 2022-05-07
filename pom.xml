@@ -11,6 +11,8 @@
     <modules>
         <module>spring-boot-starter</module>
         <module>spring-cloud-nacos</module>
+        <module>spring-cloud-eureka-server</module>
+        <module>spring-cloud-eureka</module>
     </modules>
 
     <properties>
