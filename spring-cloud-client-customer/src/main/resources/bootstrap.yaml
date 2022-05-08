@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: spring-cloud-client-customer
+
+server:
+  port: 8081
+
+---
+spring:
+  profiles: eureka
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    # 服务续约时间，默认30
+    lease-renewal-interval-in-seconds: 30
+    # 服务时效时间，默认90
+    lease-expiration-duration-in-seconds: 90
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8971/eureka
+
+---
+spring:
+  profiles: nacos
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      # service discovery
+      discovery:
+        server-addr: 127.0.0.1:8848
+        #        username: nacos
+        #        password: nacos
+        # not necessary
+        #        auto-register: true
+        namespace: public
+        group: PUBLIC_GRP
+      # configuration centre
+      config:
+        server-addr: 127.0.0.1:8848
+        # By default, this value = spring.application.name
+        # dataId=${prefix}-${spring.profiles.active}.${file-extension}
+        #prefix:
