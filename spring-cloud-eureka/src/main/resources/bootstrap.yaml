@@ -1,3 +1,17 @@
 spring:
   application:
     name: spring-cloud-eureka
+
+server:
+  port: 8081
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    # 服务续约时间，默认30
+    lease-renewal-interval-in-seconds: 30
+    # 服务时效时间，默认90
+    lease-expiration-duration-in-seconds: 90
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8971/eureka
