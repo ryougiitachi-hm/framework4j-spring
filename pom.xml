@@ -13,6 +13,10 @@
         <module>spring-cloud-nacos</module>
         <module>spring-cloud-eureka-server</module>
         <module>spring-cloud-eureka</module>
+        <module>spring-cloud-client-customer</module>
+        <module>spring-cloud-customer-nacos</module>
+        <module>spring-cloud-customer-eureka</module>
+        <module>spring-cloud-customer</module>
     </modules>
 
     <properties>
