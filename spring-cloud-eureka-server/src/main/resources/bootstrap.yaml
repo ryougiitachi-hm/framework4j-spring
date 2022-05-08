@@ -1,3 +1,22 @@
 spring:
   application:
     name: spring-cloud-eureka-server
+
+server:
+  port: 8971
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      # 默认端口8761
+      defaultZone: http://127.0.0.1:8971/eureka
+    # 是否向eureka注册自己
+    register-with-eureka: false
+    # 是否拉去服务列表
+    fetch-registry: false
+
+---
+spring:
+  profiles: cluster-8971
