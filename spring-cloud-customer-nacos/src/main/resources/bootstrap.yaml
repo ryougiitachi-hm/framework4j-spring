@@ -1,6 +1,7 @@
 spring:
   application:
-    name: spring-cloud-customer-nacos
+    name: spring-cloud-customer
+#    name: spring-cloud-customer-nacos
   cloud:
     nacos:
       username: nacos
