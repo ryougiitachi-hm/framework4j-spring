@@ -17,6 +17,10 @@
         <module>spring-cloud-customer-nacos</module>
         <module>spring-cloud-customer-eureka</module>
         <module>spring-cloud-customer</module>
+        <module>spring-cloud-openfeign</module>
+        <module>spring-cloud-openfeign-nacos</module>
+        <module>spring-cloud-openfeign-eureka</module>
+        <module>spring-commons</module>
     </modules>
 
     <properties>
