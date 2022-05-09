@@ -18,7 +18,7 @@ public class UserController {
     @GetMapping("/customer/userId/{userId}")
     public String getCustomerByUserId(@PathVariable Long userId) {
         return restTemplate.getForObject(
-                "http://spring-cloud-customer-nacos/v1/customers/customerNbr/{customerNbr}",
+                "http://spring-cloud-customer/v1/customers/customerNbr/{customerNbr}",
                 String.class, UUID.randomUUID().toString());
     }
 
