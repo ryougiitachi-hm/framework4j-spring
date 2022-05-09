@@ -1,0 +1,1 @@
+This is a counterexample that either spring-cloud-starter-netflix-eureka-client or spring-cloud-starter-alibaba-nacos-discovery can't exist at the same project.
