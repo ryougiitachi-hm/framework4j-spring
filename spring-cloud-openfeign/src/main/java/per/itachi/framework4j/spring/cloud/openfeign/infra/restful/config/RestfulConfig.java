@@ -2,6 +2,7 @@ package per.itachi.framework4j.spring.cloud.openfeign.infra.restful.config;
 
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.loadbalancer.core.RandomLoadBalancer;
 import org.springframework.cloud.loadbalancer.core.ReactorLoadBalancer;
 import org.springframework.cloud.loadbalancer.core.RoundRobinLoadBalancer;
 import org.springframework.cloud.loadbalancer.core.ServiceInstanceListSupplier;
@@ -28,7 +29,7 @@ public class RestfulConfig {
     public ReactorLoadBalancer<ServiceInstance> loadBalancerPolicyForRandom(
             Environment environment, LoadBalancerClientFactory factory) {
         String name = environment.getProperty(LoadBalancerClientFactory.PROPERTY_NAME);
-        return new RoundRobinLoadBalancer(factory.getProvider(name, ServiceInstanceListSupplier.class), name);
+        return new RandomLoadBalancer(factory.getProvider(name, ServiceInstanceListSupplier.class), name);
     }
 
     @Profile("roundrobin")
