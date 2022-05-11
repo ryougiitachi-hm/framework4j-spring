@@ -21,6 +21,7 @@
         <module>spring-cloud-openfeign-nacos</module>
         <module>spring-cloud-openfeign-eureka</module>
         <module>spring-commons</module>
+        <module>spring-cloud-config-server</module>
     </modules>
 
     <properties>
