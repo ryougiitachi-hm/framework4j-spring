@@ -1,3 +1,48 @@
-spring:
-  application:
-    name: spring-cloud-config-server
+#spring:
+#  profiles:
+#    default:
+#    - default
+#    - native
+#  application:
+#    name: spring-cloud-config-server
+##  cloud:
+##    config:
+##      server:
+##        git:
+##          uri: # git url
+##          username: # git username
+##          password: # git password
+##          clone-on-start: true # fetch config from git when starting up
+##          search-paths: config-client-* # get config from subdirectory
+##          force-pull: true
+##          skip-ssl-validation: true
+##          basedir: path
+##          refresh-rate: 3
+#  rabbitmq:
+#    addresses: 127.0.0.1:5672
+#    username: guest
+#    password: guest
+#
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      defaultZone: http://127.0.0.1:8971/eureka
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: info,health,bus-refresh
+#
+#---
+#spring:
+#  # why spring.profiles = active is mandatory?
+#  profiles: native
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations:
+#          - file:///${CONFIG_LOCAL_LOCATION}

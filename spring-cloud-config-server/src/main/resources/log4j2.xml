@@ -99,6 +99,7 @@
 		<!-- 同步 -->
 		<Logger name="org.springframework.boot" level="info"/>
 		<Logger name="org.springframework.cloud" level="info"/>
+		<Logger name="org.springframework.cloud.config" level="debug"/>
 		<Logger name="per.itachi.framework4j.spring.cloud.config" level="info"/>
 		<Root level="info">
 			<AppenderRef ref="Console"/>

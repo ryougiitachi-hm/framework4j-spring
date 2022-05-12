@@ -1,0 +1,3 @@
+# CONFIGURATION #
+## Environment Variables
+- CONFIG_LOCAL_LOCATION

@@ -1,0 +1,18 @@
+order:
+  count: 1
+  supportStatus:
+  - CREATE_PENDING
+  - CREATED
+  - PAY_PENDING
+  - PAID
+  - FINISHED
+  - CANCEL_PENDING
+  - CANCELED
+  process:
+    CHANNEL_A:
+    - STEP1
+    - STEP2
+    - STEP3
+    - STEP4
+    - STEP5
+    - STEP6
