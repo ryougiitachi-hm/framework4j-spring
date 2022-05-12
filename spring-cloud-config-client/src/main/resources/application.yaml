@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: spring-cloud-config-client
+  config:
+    import: optional:configserver:http://127.0.0.1:8080
+  cloud:
+    config:
+      enabled: false
+      import-check:
+        # not sure about this property.
+        enabled: true
+#      label: master # branch
+      # spring profile, including postfix, such as *-dev.properties
+#      profile: dev
+      # configuration file name
+      name: spring-cloud-client-config # this name is just for easy-to-remember.
+      # use this "uri" when service registry is unavailable.
+      uri: http://127.0.0.1:8080
+      discovery:
+        enabled: true
+        service-id: spring-cloud-config-server
+  rabbitmq:
+    addresses: 127.0.0.1:5672
+    username: guest
+    password: guest
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8971/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
