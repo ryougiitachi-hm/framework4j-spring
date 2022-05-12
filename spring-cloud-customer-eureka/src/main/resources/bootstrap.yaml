@@ -14,5 +14,7 @@ eureka:
     # 服务时效时间，默认90
     lease-expiration-duration-in-seconds: 90
   client:
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: http://127.0.0.1:8971/eureka

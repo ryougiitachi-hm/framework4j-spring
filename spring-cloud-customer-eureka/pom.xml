@@ -27,7 +27,11 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <!-- since spring cloud Hoxton.SR11(?) -->
+            <!--
+                since spring cloud 2020.x,
+                spring-cloud-context is deprecated,
+               refactored loading bootstrap.
+             -->
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
@@ -56,5 +60,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
