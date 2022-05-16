@@ -18,3 +18,9 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://127.0.0.1:8971/eureka
+
+feign:
+  client:
+    config:
+      spring-cloud-customer:
+        loggerLevel: full
