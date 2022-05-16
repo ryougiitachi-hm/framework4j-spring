@@ -36,7 +36,10 @@ eureka:
       defaultZone: http://127.0.0.1:8971/eureka
 
 management:
+  metrics:
+    tags:
+      application: ${spring.application.name}
   endpoints:
     web:
       exposure:
-        include: refresh
+        include: refresh,prometheus
