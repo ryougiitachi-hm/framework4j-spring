@@ -102,6 +102,7 @@
 		<Logger name="com.alibaba.nacos" level="info"/>
 		<Logger name="com.alibaba.boot" level="info"/>
 		<Logger name="com.alibaba.cloud" level="info"/>
+		<Logger name="io.github.resilience4j" level="debug"/>
 		<Logger name="per.itachi.framework4j.spring.cloud.nacos" level="info"/>
 		<Root level="info">
 			<AppenderRef ref="Console"/>
