@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import per.itachi.framework4j.spring.cloud.openfeign.infra.restful.entity.CustomerResponse;
 import per.itachi.framework4j.spring.commons.constant.UrlConstants;
 
-@FeignClient("spring-cloud-customer")
+@FeignClient(name = "spring-cloud-customer", fallback = CustomerPortFallback.class)
 public interface CustomerPort {
 
+//    @CircuitBreaker(name = "customer-svc") // does work, and the embedded cb also works
     @GetMapping(UrlConstants.CUSTOMER_SVC_CUSTOMER_BY_ID_CARD_V1)
     CustomerResponse getCustomerByIdCard(@PathVariable("idCard") String idCard);
 
