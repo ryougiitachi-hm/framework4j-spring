@@ -1,13 +1,62 @@
-#spring:
-#  application:
-#    name: spring-cloud-nacos
-#  cloud:
-#    nacos:
-      # service discovery
-#      discovery:
-#        server-addr: 127.0.0.1:8848
-#feign:
-#  client:
-#    config:
-#      spring-cloud-customer:
-#        loggerLevel: full
+spring:
+  application:
+    name: spring-cloud-openfeign
+  #    name: spring-cloud-customer-eureka
+  cloud:
+    circuitbreaker:
+      resilience4j:
+        enabled: true # enable default configuration, true by default
+
+server:
+  port: 8080
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    # 服务续约时间，默认30
+    lease-renewal-interval-in-seconds: 30
+    # 服务时效时间，默认90
+    lease-expiration-duration-in-seconds: 90
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8971/eureka
+
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: full
+      spring-cloud-customer:
+        loggerLevel: full
+  circuitbreaker:
+    enabled: true
+    alphanumeric-ids:
+      enabled: true
+
+resilience4j:
+  circuitbreaker:
+    # it seems like doesn't work.
+    configs:
+      default:
+        registerHealthIndicator: true
+        permittedNumberOfCallsInHalfOpenState: 2
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 2
+        minimumNumberOfCalls: 2
+        waitDurationInOpenState: 5s
+        failureRateThreshold: 65
+        slowCallRateThreshold: 50
+        slowCallDurationThreshold: 50ms
+    instances:
+      CustomerPortgetCustomerByIdCard:
+        registerHealthIndicator: true
+        permittedNumberOfCallsInHalfOpenState: 2
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 2
+        minimumNumberOfCalls: 2
+        waitDurationInOpenState: 5s
+        failureRateThreshold: 65
+        slowCallRateThreshold: 50
+        slowCallDurationThreshold: 50ms

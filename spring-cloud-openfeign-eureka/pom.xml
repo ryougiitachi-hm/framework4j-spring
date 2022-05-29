@@ -26,18 +26,14 @@
             <artifactId>spring-cloud-openfeign</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <!-- since spring cloud Hoxton.SR11(?) -->
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bootstrap</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            &lt;!&ndash; since spring cloud Hoxton.SR11(?) &ndash;&gt;-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-bootstrap</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
         </dependency>
     </dependencies>
 
@@ -60,5 +56,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
