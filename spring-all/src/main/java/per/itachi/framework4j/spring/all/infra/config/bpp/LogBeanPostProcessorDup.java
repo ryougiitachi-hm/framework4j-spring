@@ -1,6 +1,5 @@
 package per.itachi.framework4j.spring.all.infra.config.bpp;
 
-import javax.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
@@ -8,12 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-public class LogBeanPostProcessor implements BeanPostProcessor {
-
-    @PostConstruct // will execute.
-    public void init() {
-        log.info("LogBeanPostProcessor initialized. ");
-    }
+public class LogBeanPostProcessorDup implements BeanPostProcessor {
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName)
