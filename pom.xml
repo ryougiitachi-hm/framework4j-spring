@@ -9,6 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
+        <module>spring-all</module>
         <module>spring-boot-starter</module>
         <module>spring-cloud-nacos</module>
         <module>spring-cloud-eureka-server</module>
@@ -24,7 +25,6 @@
         <module>spring-cloud-config-server</module>
         <module>spring-cloud-config-client</module>
         <module>spring-cloud-gateway</module>
-        <module>spring-all</module>
     </modules>
 
     <properties>
