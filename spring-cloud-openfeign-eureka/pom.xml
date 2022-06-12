@@ -43,7 +43,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>per.itachi.framework4j.spring.cloud.nacos.NacosClientApplication</mainClass>
+                    <mainClass>per.itachi.framework4j.spring.cloud.openfeign.OpenFeignEurekaApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
