@@ -1,0 +1,65 @@
+spring:
+  application:
+    name: spring-cloud-openfeign
+#    name: spring-cloud-customer-nacos
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      # service discovery
+      discovery:
+        server-addr: 127.0.0.1:8848
+#        username: nacos
+#        password: nacos
+        # not necessary
+#        auto-register: true
+        namespace: public
+        group: PUBLIC_GRP
+      # configuration centre
+      config:
+        server-addr: 127.0.0.1:8848
+        group: PUBLIC_GRP
+        # By default, this value = spring.application.name
+        # dataId=${prefix}-${spring.profiles.active}.${file-extension}
+        #prefix:
+        file-extension: yaml
+      loadbalancer:
+        ribbon:
+          enabled: false
+#    compatibility-verifier:
+#      enabled: false
+
+server:
+  port: 8080
+
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: full
+      spring-cloud-customer:
+        loggerLevel: full
+  circuitbreaker:
+    enabled: true
+#    alphanumeric-ids:
+#      enabled: true
+
+---
+spring:
+  profiles: dev
+  cloud:
+    nacos:
+      discovery:
+        namespace: dev
+      config:
+        namespace: dev
+
+---
+spring:
+  profiles: uat
+  cloud:
+    nacos:
+      discovery:
+        namespace: uat
+      config:
+        namespace: uat
