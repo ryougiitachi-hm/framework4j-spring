@@ -82,6 +82,17 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <!-- "
+                We recommend switching to BlockingLoadBalancerClient instead.
+                In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false`
+                or remove spring-cloud-starter-netflix-ribbon from your project.
+            " -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-netflix-ribbon</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!--        <dependency>-->
         <!-- This is pom -->
