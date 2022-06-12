@@ -18,7 +18,7 @@ public class CustomerController {
 
     @GetMapping("/idCard/{idCard}")
     public CustomerDto getCustomerByIdCard(@PathVariable String idCard) throws InterruptedException {
-        Thread.sleep(1000L);
+//        Thread.sleep(1000L);
         CustomerDto dto = new CustomerDto();
         dto.setName(String.valueOf(port));
         dto.setIdCard(idCard);
