@@ -11,6 +11,13 @@ public class RetryMethodInterceptor implements MethodInterceptor {
 
     @Override
     public Object invoke(MethodInvocation invocation) throws Throwable {
-        return null;
+        log.info("calling, invocation={}. ", invocation);
+        try {
+//            return invocation.proceed();
+            return null;
+        }
+        finally {
+            // not useful
+        }
     }
 }

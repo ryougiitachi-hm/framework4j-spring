@@ -12,7 +12,14 @@ public class RestfulRetryListener implements RetryListener {
 
     @Override
     public <T, E extends Throwable> boolean open(RetryContext context, RetryCallback<T, E> callback) {
-        log.info("open, context={}. ", context);
+        log.info("open, context={}, callback.class={}. ", context, callback.getClass());
+//        try {
+//            Object object = callback.doWithRetry(context);
+//            log.info("result is {}. ", object);
+//        }
+//        catch (Throwable e) {
+//            log.warn("throwable. ", e);
+//        }
         return true;
     }
 

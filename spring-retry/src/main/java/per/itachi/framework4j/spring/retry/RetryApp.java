@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.retry.annotation.EnableRetry;
 
 @SpringBootApplication
-@EnableRetry
+@EnableRetry // required, or won't be enabled
 public class RetryApp {
 
     public static void main(String[] args) {
