@@ -4,5 +4,9 @@ import per.itachi.framework4j.spring.retry.infra.restful.usersvc.dto.UserDTO;
 
 public interface UserPort {
 
-    UserDTO addUser();
+    void addUser();
+
+    UserDTO getUserById(Long id);
+
+    UserDTO getUserByIdRetryable(Long id);
 }

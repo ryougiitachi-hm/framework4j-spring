@@ -99,7 +99,7 @@
 		<!-- 同步 -->
 		<Logger name="org.springframework.boot" level="info"/>
 		<Logger name="org.springframework.cloud" level="info"/>
-		<Logger name="org.springframework.retry" level="debug"/>
+		<Logger name="org.springframework.retry" level="info"/><!-- debug -->
 		<Logger name="com.alibaba.nacos" level="info"/>
 		<Logger name="com.alibaba.boot" level="info"/>
 		<Logger name="com.alibaba.cloud" level="info"/>

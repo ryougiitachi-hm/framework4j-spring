@@ -10,6 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>spring-retry</artifactId>
 
+<!--    <properties>-->
+<!--        <spring.boot.version>2.5.12</spring.boot.version>-->
+<!--    </properties>-->
+
     <dependencies>
         <!-- test -->
         <dependency>
